@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movilidad Urbana y Productividad Económica en LATAM — César Ramírez</title>
+<meta name="description" content="Integración de datos de tráfico (TomTom) e indicadores económicos (OECD) para analizar movilidad urbana y productividad en ciudades de LATAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">&gt;_ <span class="accent">César Ramírez</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+      <li><a href="../index.html#certificaciones">Certificaciones</a></li>
+      <li><a href="../index.html#habilidades">Habilidades</a></li>
+      <li><a href="../index.html#proyectos">Proyectos</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="container">
+    <a href="../index.html#proyectos" class="back-link">← Volver al portafolio</a>
+    <h1>Movilidad Urbana y Productividad Económica en LATAM</h1>
+    <p class="project-meta">Python · Pandas · Seaborn · Matplotlib</p>
+    <div class="project-hero-img">
+      <img src="../assets/img/projects/proyecto-1.svg" alt="Visualización comparando congestión vehicular y PIB per cápita por ciudad">
+    </div>
+  </div>
+</header>
+
+<section class="project-detail">
+  <div class="container">
+    <h2>Objetivo</h2>
+    <p>Como analista de datos del Latin American Development Bank, el objetivo fue entender cómo la movilidad urbana se relaciona con la productividad económica en las principales ciudades latinoamericanas, para identificar en qué ciudades conviene invertir en infraestructura de transporte y así aumentar la productividad y el bienestar de la población.</p>
+
+    <h2>Fuentes de datos</h2>
+    <ul>
+      <li><strong>TomTom Traffic Index</strong> — niveles de congestión, tiempos de viaje y retrasos en tiempo real (más de 1,000,000 de registros).</li>
+      <li><strong>OECD Cities</strong> — PIB per cápita, desempleo y población por ciudad (30 registros por ciudad y año).</li>
+    </ul>
+
+    <h2>Herramientas usadas</h2>
+    <div class="tool-tags">
+      <span class="chip">Python</span>
+      <span class="chip">Pandas</span>
+      <span class="chip">Seaborn</span>
+      <span class="chip">Matplotlib</span>
+      <span class="chip">Jupyter Notebook</span>
+    </div>
+
+    <h2>Proceso / metodología</h2>
+    <ul>
+      <li>Carga y exploración de la estructura de ambos datasets.</li>
+      <li>Limpieza y estandarización: conversión de fechas a datetime, nombres a snake_case, y limpieza de formatos numéricos (símbolos, separadores de miles, conversión de tipos).</li>
+      <li>Filtrado de los registros de 2024, el período más reciente, extrayendo el año a partir de las fechas.</li>
+      <li>Agregación de promedios anuales por ciudad para las métricas de tráfico más relevantes (JamsDelay, TrafficIndexLive, MinsDelay, tiempos de viaje).</li>
+      <li>Unión de ambas fuentes mediante un merge (inner join) usando ciudad y año como claves.</li>
+      <li>Visualización exploratoria: boxplot de congestión, histograma de PIB per cápita y gráfico de barras comparativo por ciudad.</li>
+    </ul>
+
+    <h2>Resultados clave</h2>
+    <ul>
+      <li>El retraso promedio por congestión (JamsDelay) en 2024 fue de 629.52 minutos, con una dispersión amplia entre ciudades.</li>
+      <li>La mayoría de las ciudades analizadas concentran un PIB per cápita entre 7,000 y 15,000 USD, con algunas ciudades por encima de los 20,000 USD.</li>
+      <li>Cruzar ambas fuentes permitió comparar directamente congestión y productividad económica por ciudad, sentando las bases para identificar dónde la inversión en transporte tendría mayor impacto.</li>
+    </ul>
+
+    <h2>Repositorio / dataset</h2>
+    <p><a href="#" style="color: var(--accent); font-family: var(--font-mono);">→ Ver código y notebook en GitHub</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><span class="accent">&gt;_</span> César Ramírez — Analista de Datos · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

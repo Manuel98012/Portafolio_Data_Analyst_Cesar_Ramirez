@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="10" fill="#C7C2DA"/>
+  <rect x="30" y="28" width="230" height="32" rx="16" fill="#faf9fc" stroke="#2b2b32" stroke-width="1.5"/>
+  <circle cx="48" cy="44" r="9" fill="#faf9fc" stroke="#2b2b32" stroke-width="1.5"/>
+  <path d="M44 44l3 3 6-6" fill="none" stroke="#2b2b32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="49" font-family="'Inter', sans-serif" font-size="10" font-weight="700" letter-spacing="0.5" fill="#2b2b32">CERTIFICATE of COMPLETION</text>
+
+  <text x="30" y="98" font-family="Georgia, serif" font-size="19" fill="#2b2b32">Cesar Manuel Ramírez Hernández</text>
+  <text x="30" y="120" font-family="'Inter', sans-serif" font-size="11" fill="#3a3a45">has completed</text>
+
+  <text x="30" y="163" font-family="'Inter', sans-serif" font-size="27" font-weight="800" fill="#232330">Introduction to Claude</text>
+  <text x="30" y="196" font-family="'Inter', sans-serif" font-size="27" font-weight="800" fill="#232330">Cowork</text>
+
+  <text x="30" y="265" font-family="'Inter', sans-serif" font-size="15" font-weight="800" letter-spacing="1" fill="#2b2b32">ANTHROPIC</text>
+</svg>

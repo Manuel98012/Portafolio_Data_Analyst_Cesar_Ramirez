@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segmentación de clientes — César Ramírez</title>
+<meta name="description" content="Agrupación de clientes según hábitos de compra mediante clustering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">&gt;_ <span class="accent">César Ramírez</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+      <li><a href="../index.html#certificaciones">Certificaciones</a></li>
+      <li><a href="../index.html#habilidades">Habilidades</a></li>
+      <li><a href="../index.html#proyectos">Proyectos</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="container">
+    <a href="../index.html#proyectos" class="back-link">← Volver al portafolio</a>
+    <h1>Segmentación de clientes</h1>
+    <p class="project-meta">Python · Scikit-learn · Pandas · Seaborn</p>
+    <div class="project-hero-img">
+      <img src="../assets/img/projects/proyecto-3.svg" alt="Visualización de la segmentación de clientes">
+    </div>
+  </div>
+</header>
+
+<section class="project-detail">
+  <div class="container">
+    <h2>Objetivo</h2>
+    <p>Agrupar clientes según sus hábitos de compra para orientar estrategias de marketing personalizadas por segmento.</p>
+
+    <h2>Herramientas usadas</h2>
+    <div class="tool-tags">
+      <span class="chip">Python</span>
+      <span class="chip">Scikit-learn</span>
+      <span class="chip">Pandas</span>
+      <span class="chip">Seaborn</span>
+    </div>
+
+    <h2>Proceso / metodología</h2>
+    <ul>
+      <li>Cálculo de variables RFM (Recencia, Frecuencia, Monto) por cliente.</li>
+      <li>Normalización de variables y reducción de outliers.</li>
+      <li>Aplicación de clustering con K-Means y selección del número óptimo de grupos.</li>
+      <li>Interpretación y perfilado de cada segmento resultante.</li>
+    </ul>
+
+    <h2>Resultados clave</h2>
+    <ul>
+      <li>Se identificaron 4 segmentos de clientes con comportamientos de compra claramente diferenciados.</li>
+      <li>El segmento de mayor valor representa una minoría de clientes pero una gran parte de los ingresos.</li>
+      <li>Se propusieron acciones de marketing específicas para cada segmento (retención, reactivación, fidelización).</li>
+    </ul>
+
+    <h2>Repositorio / dataset</h2>
+    <p><a href="#" style="color: var(--accent); font-family: var(--font-mono);">→ Ver código y notebook en GitHub</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><span class="accent">&gt;_</span> César Ramírez — Analista de Datos · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

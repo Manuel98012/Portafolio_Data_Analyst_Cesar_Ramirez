@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto RappiPlus — César Ramírez</title>
+<meta name="description" content="Evaluación del desempeño de RappiPlus: rentabilidad, embudo de conversión, retención por cohortes, test A/B y dashboard en Power BI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="../index.html" class="logo">&gt;_ <span class="accent">César Ramírez</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+      <li><a href="../index.html#certificaciones">Certificaciones</a></li>
+      <li><a href="../index.html#habilidades">Habilidades</a></li>
+      <li><a href="../index.html#proyectos">Proyectos</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="container">
+    <a href="../index.html#proyectos" class="back-link">← Volver al portafolio</a>
+    <h1>Proyecto RappiPlus</h1>
+    <p class="project-meta">De datos a decisiones de negocio: evaluación del desempeño de un servicio de suscripción · Python · SQL · Power BI</p>
+    <div class="project-hero-img">
+      <img src="../assets/img/projects/rappiplus-overview.png" alt="Dashboard de desempeño comercial de RappiPlus en Power BI — vista Overview" class="hero-img-photo">
+    </div>
+  </div>
+</header>
+
+<section class="project-detail">
+  <div class="container">
+    <h2>Objetivo</h2>
+    <p>RappiPlus es un servicio de suscripción dentro del ecosistema de Rappi, diseñado para aumentar la frecuencia de compra y el valor generado por usuario. El equipo de negocio no tenía claridad sobre si el servicio cumplía ese objetivo: no sabía si los datos disponibles eran confiables, si el modelo era rentable, en qué punto del proceso de compra se perdían usuarios, si los usuarios regresaban a la plataforma y si un cambio reciente en el producto había tenido impacto real.</p>
+    <p>El objetivo fue transformar datos de pedidos, catálogo, marketing y comportamiento de usuario en respuestas concretas a esas preguntas, y comunicar los resultados en un dashboard que el negocio pudiera usar para tomar decisiones. El análisis se organizó en seis etapas: calidad de los datos, rentabilidad, embudo de conversión, retención de usuarios, impacto de un experimento y comunicación de resultados mediante un dashboard.</p>
+
+    <h2>Fuentes de datos</h2>
+    <ul>
+      <li><strong>Pedidos</strong> — 25,100 registros (24,600 tras la limpieza).</li>
+      <li><strong>Catálogo de productos</strong> — costo e información de cada producto.</li>
+      <li><strong>Gasto de marketing</strong> — inversión por canal y campaña.</li>
+      <li><strong>Base de datos PostgreSQL</strong> — tablas de eventos y usuarios, consultadas vía SQLAlchemy.</li>
+    </ul>
+
+    <h2>Herramientas usadas</h2>
+    <div class="tool-tags">
+      <span class="chip">Python</span>
+      <span class="chip">Pandas</span>
+      <span class="chip">NumPy</span>
+      <span class="chip">SQL (PostgreSQL)</span>
+      <span class="chip">Statsmodels</span>
+      <span class="chip">Power BI</span>
+      <span class="chip">Jupyter Notebook</span>
+    </div>
+
+    <h2>Proceso / metodología</h2>
+    <ul>
+      <li><strong>1. Calidad de datos:</strong> conversión de fechas, revisión de nulos, eliminación de duplicados, estandarización de texto y verificación cruzada del monto de cada pedido (cantidad × precio − descuento).</li>
+      <li>
+        <strong>2. Rentabilidad:</strong> cálculo de indicadores financieros combinando pedidos con el costo unitario del catálogo.
+        <img src="../assets/img/projects/rappiplus-rentabilidad.png" alt="Notebook: gasto de marketing por canal y unidades vendidas por producto" class="step-screenshot">
+      </li>
+      <li><strong>3. Embudo de conversión:</strong> conteo de usuarios únicos por etapa directamente sobre la tabla de eventos con SQL.</li>
+      <li>
+        <strong>4. Retención por cohortes:</strong> usuarios agrupados por mes de registro, midiendo actividad a los 7, 14, 21 y 28 días.
+        <img src="../assets/img/projects/rappiplus-retencion.png" alt="Consulta SQL para calcular la retención por cohortes" class="step-screenshot">
+      </li>
+      <li>
+        <strong>5. Test A/B:</strong> prueba de dos proporciones (z-test, 5% de significancia) sobre un cambio en la interfaz de checkout.
+        <img src="../assets/img/projects/rappiplus-testab.png" alt="Notebook: prueba de dos proporciones (z-test) entre control y tratamiento" class="step-screenshot">
+      </li>
+      <li>
+        <strong>6. Dashboard:</strong> construcción de un dashboard de dos vistas en Power BI para comunicar resultados a audiencias no técnicas.
+        <img src="../assets/img/projects/rappiplus-overview.png" alt="Dashboard RappiPlus — vista Overview en Power BI" class="step-screenshot">
+        <img src="../assets/img/projects/rappiplus-detallada.png" alt="Dashboard RappiPlus — vista Detallada en Power BI" class="step-screenshot">
+      </li>
+    </ul>
+
+    <h2>Resultados clave</h2>
+    <ul>
+      <li><strong>Calidad de datos:</strong> tras eliminar 400 duplicados y filas incompletas, el dataset quedó en 24,600 registros limpios y consistentes.</li>
+      <li><strong>Rentabilidad:</strong> revenue de 51,966,982, costo de 43,124,069, inversión en marketing de 2,871,844 y profit de 8,842,913 (~17% de margen). Ticket promedio de 2,083 con 7.1 productos por orden. El producto Laptop-Gaming-16GB concentra la mayor parte del volumen, lo que representa un riesgo de concentración.</li>
+      <li><strong>Embudo de conversión:</strong> 95.4% agrega un producto al carrito, 94.8% selecciona un producto, 90.2% inicia el checkout y solo 78.1% llega a ingresar su información de pago — la mayor caída (~12 puntos) ocurre justo antes del pago.</li>
+      <li><strong>Retención por cohortes:</strong> patrón estable entre cohortes: 85%–87% activo a los 7 días, 78%–80% a los 14 días, 63%–65% a los 21 días y ~40% a los 28 días.</li>
+      <li><strong>Test A/B:</strong> conversión de 15.7% en control (4,965 usuarios) vs. 16.3% con el nuevo checkout (5,035 usuarios); z = −0.81, p = 0.42 → no hay evidencia estadística de un impacto real.</li>
+      <li><strong>Dashboard:</strong> dos vistas en Power BI (Overview y Detallada) con KPIs, distribución por categoría/país/canal, evolución mensual y una tabla de margen por producto — pensado para que el negocio lo use sin depender de un analista.</li>
+    </ul>
+
+    <h2>Conclusiones y recomendaciones</h2>
+    <ul>
+      <li>Priorizar mejoras en el flujo de pago para reducir la caída en esa etapa del embudo.</li>
+      <li>Diseñar campañas de reactivación dirigidas a usuarios que se acercan al día 28 sin actividad.</li>
+      <li>Diversificar el catálogo o el enfoque comercial para reducir la dependencia de un solo producto de alto volumen y bajo margen.</li>
+      <li>Si se repite el test del checkout, diseñar variantes con un efecto esperado más marcado o ampliar el tamaño de muestra.</li>
+    </ul>
+
+    <h2>Repositorio / dataset</h2>
+    <p><a href="../assets/notebooks/rappiplus-analisis.ipynb" style="color: var(--accent); font-family: var(--font-mono);">→ Descargar el notebook completo (.ipynb)</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><span class="accent">&gt;_</span> César Ramírez — Analista de Datos · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
