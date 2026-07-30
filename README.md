@@ -29,7 +29,7 @@ y visitar `http://localhost:8000`.
 ## Cómo personalizarlo
 
 1. **Contenido de texto**: reemplaza "Tu Nombre", la bio de la sección "Sobre mí", las habilidades y las descripciones de proyectos en `index.html` y en cada `proyectos/proyecto-N.html`.
-2. **Imágenes**: sustituye `assets/img/avatar.svg` por tu foto real y los archivos en `assets/img/projects/` por capturas de tus dashboards/notebooks.
+2. **Imágenes**: reemplaza `assets/img/avatar.jpg` por tu foto y los archivos en `assets/img/projects/` por capturas de tus dashboards/notebooks.
 3. **Redes y contacto**: actualiza los enlaces de LinkedIn, GitHub y el correo en la sección "Contact me" de `index.html`.
 4. **Formulario de contacto (Formspree)**:
    - Crea una cuenta gratuita en [formspree.io](https://formspree.io).
