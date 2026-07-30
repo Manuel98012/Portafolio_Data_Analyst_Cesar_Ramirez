@@ -788,6 +788,25 @@ footer .accent {
   margin-bottom: 20px;
 }
 
+.coming-soon {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.coming-soon .section-label {
+  text-align: center;
+}
+
+.coming-soon h2 {
+  margin-bottom: 16px;
+}
+
+.coming-soon p {
+  color: var(--text-muted);
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
 /* ============================================
    Responsive
 ============================================ */
